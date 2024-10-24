@@ -1,0 +1,74 @@
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    border: 1px solid black;
+}
+
+.box:hover {
+    transform: rotate (180deg) ; 
+    background-color: pink;
+    transition-duration: 0.5s;
+    width: 200px;
+    height: 200px;
+    animation: rotate 6s ;
+
+}
+
+
+
+.cyrcle-conteiner {
+    border: 1px solid black;
+    width: fit-content;
+    padding-right: 400px;
+}
+
+.cyrcle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: red;
+    animation: race 5s infinite;
+}
+
+img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 100%; 
+    animation: race1 2s infinite; 
+}
+
+
+@keyframes race1 { 
+    0% { 
+      transform: rotate(0deg); 
+    } 
+    100% { 
+      transform: rotate(360deg); 
+    } 
+  }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes race { 
+    0% { 
+      transform: rotateY(0deg) rotate(0deg); 
+    } 
+    50% { 
+      transform: translate(400px, 0px) rotateY(0) rotate(0deg); 
+    } 
+    100% { 
+      transform: translate(0, 0) rotate(0deg); 
+    } 
+  }
